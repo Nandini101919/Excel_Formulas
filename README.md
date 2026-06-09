@@ -48,81 +48,81 @@ The dataset contains the following fields:
 ### Total Marks
 
 ```excel
-=SUM(C2:G2)
+=SUM(C3:G3)
 ```
 
 ### Percentage
 
 ```excel
-=H2/500*100
+=H3/500*100
 ```
 
 ### Result
 
 ```excel
-=IF(I2>=35,"Pass","Fail")
+=IF(I3>=35,"Pass","Fail")
 ```
 
 ### Grade
 
 ```excel
-=IF(I2>=90,"A+",IF(I2>=75,"A",IF(I2>=60,"B",IF(I2>=50,"C","D"))))
+=IF(I3>=80,"A",IF(AND(I3>=70,I3<80),"B",IF((AND(I3>=60,I3<70,"C",IF(AND(I3>=50,I3<60),"D",IF(AND(I3>40,I3<50),"E","FAIL")))))
 ```
 
 ### UPPER Function
 
 ```excel
-=UPPER(B2)
+=UPPER(B3)
 ```
 
 ### LOWER Function
 
 ```excel
-=LOWER(B2)
+=LOWER(B3)
 ```
 
 ### PROPER Function
 
 ```excel
-=PROPER(B2)
+=PROPER(B3)
 ```
 
 ### ROUNDUP Function
 
 ```excel
-=ROUNDUP(I2,0)
+=ROUNDUP(I3,0)
 ```
 
 ### ROUNDDOWN Function
 
 ```excel
-=ROUNDDOWN(I2,0)
+=ROUNDDOWN(I3,0)
 ```
 
 ---
 
 # 📸 Topper and Least Analysis
 
-![Topper Analysis](topper2.png)
+![Topper Analysis](topper.png)
 
 ## Top Performers
 
 ### First Topper
 
 ```excel
-=LARGE(I2:I20,1)
+=MAX(I3:I12)
 ```
 
 ### Second Topper
 
 ```excel
-=LARGE(I2:I20,2)
+=LARGE(I3:I12,2)
 ```
 
 ### Third Topper
 
 ```excel
-=LARGE(I2:I20,3)
+=LARGE(I3:I12,3)
 ```
 
 ## Least Performers
@@ -130,19 +130,19 @@ The dataset contains the following fields:
 ### First Least
 
 ```excel
-=SMALL(I2:I20,1)
+=MIN(I3:I12)
 ```
 
 ### Second Least
 
 ```excel
-=SMALL(I2:I20,2)
+=SMALL(I3:I12,2)
 ```
 
 ### Third Least
 
 ```excel
-=SMALL(I2:I20,3)
+=SMALL(I3:I12,3)
 ```
 
 ### Explanation
